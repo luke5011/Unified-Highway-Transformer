@@ -3,11 +3,38 @@
 
 [![DOI](https://img.shields.io/badge/DOI-10.6084%2Fm9.figshare.33510313-blue)](https://doi.org/10.6084/m9.figshare.33510313)
 
-Official repository for the Unified Highway Transformer (UHT). The UHT introduces an O(1) parallel memory bus to solve Latent Amnesia and PreNorm Dilution in deep networks. It eliminates gradient stagnation, with successful stress tests conducted up to 180 layers. Python implementation and replication scripts to be added shortly.
+Official repository for the Unified Highway Transformer (UHT). The UHT introduces an O(1) parallel memory bus to solve Latent Amnesia and PreNorm Dilution in deep networks. It eliminates gradient stagnation, with successful stress tests conducted up to 180 layers. 
 
 ---
 
-## Visual Proof of Convergence
+Quick Start & Reproducibility
+1. Installation
+Clone the repository and install the required dependencies:
+
+pip install -r requirements.txt
+
+2. Dataset Preparation
+Download and tokenize the WikiText-103 dataset using the standard GPT-2 encoder:
+
+python prepare.py
+
+3. Rapid Evaluation (10-Second Verification)
+You can instantly verify the 120-layer terminal validation loss (4.31) and perplexity (74.88) claimed in the paper without running a 50-epoch training cycle:
+
+Download the pre-trained weights (uht_120L_lean.pt) from the Releases tab on the right side of this repository page.
+
+Place the .pt file in the main repository directory.
+
+Run the evaluation command:
+
+python train.py --eval_only --checkpoint uht_120L_lean.pt
+
+4. Full Training Run
+To initiate a full training cycle from scratch on your own hardware (automatically logs gradient deciles and variance tracking to a CSV):
+
+python train.py
+
+## Visualization of Convergence
 
 <img width="1200" height="800" alt="120L_gradient_comparison" src="https://github.com/user-attachments/assets/c6f4ab12-594c-46d3-a66f-fe4eb09148ba" />
 
