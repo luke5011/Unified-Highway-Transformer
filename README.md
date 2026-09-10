@@ -13,7 +13,7 @@ Clone the repository and install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 2. Dataset Preparation
 Download and tokenize the WikiText-103 dataset using the standard GPT-2 encoder:
