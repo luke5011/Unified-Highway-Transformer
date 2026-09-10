@@ -11,13 +11,16 @@ Quick Start & Reproducibility
 1. Installation
 Clone the repository and install the required dependencies:
 
+```bash
 pip install -r requirements.txt
+
 
 2. Dataset Preparation
 Download and tokenize the WikiText-103 dataset using the standard GPT-2 encoder:
 
+```bash
 python prepare.py
-
+```
 3. Rapid Evaluation (10-Second Verification)
 You can instantly verify the 120-layer terminal validation loss (4.31) and perplexity (74.88) claimed in the paper without running a 50-epoch training cycle:
 
@@ -27,13 +30,15 @@ Place the .pt file in the main repository directory.
 
 Run the evaluation command:
 
+```bash
 python train.py --eval_only --checkpoint uht_120L_lean.pt
-
+```
 4. Full Training Run
 To initiate a full training cycle from scratch on your own hardware (automatically logs gradient deciles and variance tracking to a CSV):
 
+```bash
 python train.py
-
+```
 ## Visualization of Convergence
 
 <img width="1200" height="800" alt="120L_gradient_comparison" src="https://github.com/user-attachments/assets/c6f4ab12-594c-46d3-a66f-fe4eb09148ba" />
