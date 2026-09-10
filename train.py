@@ -88,7 +88,7 @@ def main():
     train_data = np.memmap("wiki_train.bin", dtype=np.uint16, mode='r')
     val_data = np.memmap("wiki_val.bin", dtype=np.uint16, mode='r')
 
-    steps_per_epoch = 10 #1000  
+    steps_per_epoch = 1000  
     seed_list = [42, 105]
     
     val_loss_history = {seed: [] for seed in seed_list}
