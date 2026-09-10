@@ -69,5 +69,6 @@ If you use this architecture or diagnostic methodology in your research, please 
   year={2026},
   publisher={Figshare},
   doi={10.6084/m9.figshare.33510313},
-  url={[https://doi.org/10.6084/m9.figshare.33510313](https://doi.org/10.6084/m9.figshare.33510313)}
+  url={https://doi.org/10.6084/m9.figshare.33510313}
 }
+```
