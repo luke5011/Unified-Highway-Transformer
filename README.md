@@ -1,8 +1,41 @@
 
-# Unified-Highway-Transformer
-Official repository for the Unified Highway Transformer (UHT). The UHT introduces an O(1) parallel memory bus to solve PreNorm Dilution in deep networks. It eliminates gradient stagnation, with successful stress tests conducted up to 180 layers. Python implementation and replication scripts to be added shortly.
-<img width="1200" height="400" alt="180L_gradient_comparison_20260909_105820" src="https://github.com/user-attachments/assets/ea9925f7-03f4-4fda-ae89-bc9dfa5859ef" />
-<img width="1200" height="800" alt="120L_gradient_comparison_20260907_184842" src="https://github.com/user-attachments/assets/c6f4ab12-594c-46d3-a66f-fe4eb09148ba" />
+# Unified Highway Transformer (UHT)
 
-10.6084/m9.figshare.33510313
+[![DOI](https://img.shields.io/badge/DOI-10.6084%2Fm9.figshare.33510313-blue)](https://doi.org/10.6084/m9.figshare.33510313)
 
+Official repository for the Unified Highway Transformer (UHT). The UHT introduces an O(1) parallel memory bus to solve Latent Amnesia and PreNorm Dilution in deep networks. It eliminates gradient stagnation, with successful stress tests conducted up to 180 layers. Python implementation and replication scripts to be added shortly.
+
+---
+
+## Visual Proof of Convergence
+
+<img width="1200" height="800" alt="120L_gradient_comparison" src="https://github.com/user-attachments/assets/c6f4ab12-594c-46d3-a66f-fe4eb09148ba" />
+
+**Above:** 120-Layer UHT vs. Baseline Pre-LN Transformer. The UHT maintains dynamic gradient flow deep in the network, while the standard architecture stagnates near zero.
+
+<img width="1200" height="400" alt="180L_gradient_comparison" src="https://github.com/user-attachments/assets/ea9925f7-03f4-4fda-ae89-bc9dfa5859ef" />
+
+**Above:** 180-Layer UHT stress test, verifying sustained gradient activity and stability at extreme architectural depths.
+
+---
+
+## Read the Paper
+
+The complete manuscript detailing the methodology, Amorphous Neural Network diagnostic proxies, and empirical test results is available directly in this repository:
+[📄 Read the UHT Paper (PDF)](Unified%20Highway%20Transformer%20Paper_3.pdf)
+
+---
+
+## Citation
+
+If you use this architecture or diagnostic methodology in your research, please cite:
+
+```bibtex
+@article{simon2026uht,
+  title={Designing Better Transformers: Using Amorphous Network Proxies to Engineer the Unified Highway Transformer},
+  author={Simon, Anthony Luke},
+  year={2026},
+  publisher={Figshare},
+  doi={10.6084/m9.figshare.33510313},
+  url={[https://doi.org/10.6084/m9.figshare.33510313](https://doi.org/10.6084/m9.figshare.33510313)}
+}
